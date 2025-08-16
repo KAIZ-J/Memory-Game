@@ -69,7 +69,8 @@ function fxGameStats(){
     gameStats.innerHTML="";
     gameStats.style.display="flex";
     gameStats.innerHTML=`<div><p>Level ${currentLevel}<p> <p>Tries ${numOftries}/${levels[currentLevel-1].tries}</p></div>
-        <progress max="${levels[currentLevel-1].tries}" value="${levels[currentLevel-1].tries-numOftries}"></progress>`
+        <progress max="${levels[currentLevel-1].tries}" value="${levels[currentLevel-1].tries-numOftries}"></progress><br>
+        <button type="button" id="nextLevel" onclick="startGame()">Restart Game</button>`
 }
 function checkWin(){
 if(totalMatched===levels[currentLevel-1].card.length/2){
