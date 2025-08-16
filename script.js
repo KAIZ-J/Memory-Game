@@ -32,7 +32,7 @@ let tried = 1;
 let chars = [];
 let indexs = [];
 let totalMatched = 0;
-let currentLevel=1;
+let currentLevel=parseInt(localStorage.getItem("currentLevel")) || 1;
 let numOftries = 0;
 document.getElementById("level-text").textContent=currentLevel<=5?`Level ${currentLevel}/5`:`More levels Coming Soon`;
 ;
@@ -76,6 +76,7 @@ function checkWin(){
 if(totalMatched===levels[currentLevel-1].card.length/2){
     gameWon=true;
     currentLevel++;
+    localStorage.setItem("currentLevel",currentLevel)
    setTimeout(function(){
 cardsContainer.style.display="none";
     gameStats.style.display="none";
