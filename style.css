@@ -29,7 +29,7 @@
        
         #cards-container{
       display: none;
-      grid-template-columns: repeat(6,1fr);
+      grid-template-columns: repeat(4,1fr);
       gap: 15px; 
       border:2px solid #d4a373;
       border-radius: 10px;
@@ -80,15 +80,7 @@
             justify-content: center;
             transform:rotateY(180deg) ;
         }
-        @media (max-width:780px){
-           #cards-container{
-      grid-template-columns: repeat(4,1fr); 
-        } 
-        }
         @media (max-width:480px){
-           #cards-container{
-      grid-template-columns: repeat(4,1fr); 
-        }
         .out-card{
        width: 65px;
        height: 65px;
