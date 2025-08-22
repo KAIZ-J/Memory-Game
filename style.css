@@ -12,6 +12,9 @@
             
             flex-direction: column;
         }
+        body::-webkit-scrollbar{
+          display: none;
+        }
         #play,#nextLevel{
             width: 200px;
             padding: 10px;
@@ -45,7 +48,7 @@
        transition: transform .3s ease;
         }
         #home{
-            height: 100vh;
+            height: 80vh;
             justify-content: center;
             align-items: center;
             display: flex;
